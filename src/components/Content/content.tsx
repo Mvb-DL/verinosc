@@ -10,7 +10,6 @@ const ContentSections: React.FC = () => {
   const sectionKey = pathname === "/transparency" ? "transparency" : "landing";
   const sections = contentData[sectionKey] ?? [];
 
-  // Initialize DOMPurify only in browser
   const DOMPurify = useMemo(() => {
     if (typeof window === "undefined") return null;
     return createDOMPurify(window);
