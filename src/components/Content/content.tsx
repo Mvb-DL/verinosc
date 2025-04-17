@@ -19,13 +19,11 @@ const ContentSections: React.FC = () => {
   return (
     <>
       {sections.map((content, index) => {
-        // Uniform spacing before numbered subsections (e.g., 5.1, 10. etc.)
-        // and consistent vertical spacing before each bullet line
+
         const spacedText = content.text
           .replace(/<br\s*\/?>\s*(\d+\.\d+\.)/g, '<div class="my-10"></div>$1')
           .replace(/\n•\s/g, '<br/><div class="my-4"></div>• ');
 
-        // Convert remaining new lines to <br/>
         const withLineBreaks = spacedText.replace(/\n/g, "<br/>");
 
         const sanitizedHtml = DOMPurify
