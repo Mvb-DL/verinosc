@@ -6,7 +6,7 @@ export default function Transparency() {
     <>
       <ScrollUp />
 
-      <div className="pt-15 sm:pt-24 md:pt-32 lg:pt-25">
+      <div className="mt-20 pt-30 sm:pt-34 md:pt-22 lg:pt-20">
         <Content />
       </div>
     </>
