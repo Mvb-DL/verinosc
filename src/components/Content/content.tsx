@@ -10,19 +10,32 @@ const ContentSections: React.FC = () => {
   const sectionKey = pathname === "/transparency" ? "transparency" : "landing";
   const sections = contentData[sectionKey] ?? [];
 
-  // DOMPurify nur im Browser initialisieren
+  // Initialize DOMPurify only in browser
   const DOMPurify = useMemo(() => {
     if (typeof window === "undefined") return null;
-    return createDOMPurify(window);
+    const purifier = createDOMPurify(window);
+    // Allow common list elements in sanitized HTML
+    purifier.addHook('uponSanitizeElement', (node, data) => {
+      // keep default behavior
+    });
+    return purifier;
   }, []);
 
   return (
     <>
       {sections.map((content, index) => {
+        // Replace new lines with <br/> but preserve existing HTML lists
         const withLineBreaks = content.text.replace(/\n/g, "<br/>");
-        // Fallback: wenn DOMPurify noch nicht da ist, geben wir raw HTML aus
+        
+
         const sanitizedHtml = DOMPurify
-          ? DOMPurify.sanitize(withLineBreaks)
+          ? DOMPurify.sanitize(withLineBreaks, {
+              ALLOWED_TAGS: [
+                'b','i','em','strong','a',
+                'ul','ol','li','br','p'
+              ],
+              ALLOWED_ATTR: ['href','target','rel']
+            })
           : withLineBreaks;
 
         return (
