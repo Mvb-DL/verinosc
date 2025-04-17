@@ -13,28 +13,28 @@ const ContentSections: React.FC = () => {
   // Initialize DOMPurify only in browser
   const DOMPurify = useMemo(() => {
     if (typeof window === "undefined") return null;
-    const purifier = createDOMPurify(window);
-    // Allow common list elements in sanitized HTML
-    purifier.addHook('uponSanitizeElement', (node, data) => {
-      // keep default behavior
-    });
-    return purifier;
+    return createDOMPurify(window);
   }, []);
 
   return (
     <>
       {sections.map((content, index) => {
-        // Replace new lines with <br/> but preserve existing HTML lists
-        const withLineBreaks = content.text.replace(/\n/g, "<br/>");
-        
+        // Uniform spacing before numbered subsections (e.g., 5.1, 10. etc.)
+        // and consistent vertical spacing before each bullet line
+        const spacedText = content.text
+          .replace(/<br\s*\/?>\s*(\d+\.\d+\.)/g, '<div class="my-10"></div>$1')
+          .replace(/\n•\s/g, '<br/><div class="my-4"></div>• ');
+
+        // Convert remaining new lines to <br/>
+        const withLineBreaks = spacedText.replace(/\n/g, "<br/>");
 
         const sanitizedHtml = DOMPurify
           ? DOMPurify.sanitize(withLineBreaks, {
               ALLOWED_TAGS: [
-                'b','i','em','strong','a',
-                'ul','ol','li','br','p'
+                'b', 'i', 'em', 'strong', 'a',
+                'ul', 'ol', 'li', 'br', 'p', 'div'
               ],
-              ALLOWED_ATTR: ['href','target','rel']
+              ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
             })
           : withLineBreaks;
 
@@ -42,7 +42,7 @@ const ContentSections: React.FC = () => {
           <section
             key={index}
             id={`section-${index + 1}`}
-            className="relative z-10 overflow-hidden pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+            className="relative z-10 overflow-hidden pb-16 pt-[70px] dark:bg-gray-dark md:pb-[120px] md:pt-[120px] xl:pb-[100px] xl:pt-[100px] 2xl:pb-[100px] 2xl:pt-[100px]"
           >
             <div className="container">
               <div className="flex flex-col lg:flex-row">

@@ -17,7 +17,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
 
-      <body className={`bg-[#F6F6F6] dark:bg-black ${inter.className} border border-red-500`}>
+      <body className={`bg-[#F6F6F6] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
           {children}
