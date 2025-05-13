@@ -111,7 +111,7 @@ const Header = () => {
                       >
                         {menuItem.title}
                         <span className="pl-3">
-                          <svg width="25" height="24" viewBox="0 0 25 24">
+                          <svg width="20" height="20" viewBox="0 0 25 24">
                             <path
                               fillRule="evenodd"
                               clipRule="evenodd"
