@@ -28,7 +28,7 @@ const PrivacyPolicy: React.FC = () => {
         <li><strong>No cookies or trackers</strong> – We do not use cookies, analytics, or marketing tools.</li>
         <li><strong>No contact forms, newsletters, etc.</strong> – There are no features through which you can submit personal data to us.</li>
         <li>
-          <strong>Server log files</strong> – The hosting provider processes technically unavoidable information when the site is accessed (e.g., date &amp; time of request, requested file, browser "User-Agent"). These data are stored without IP addresses or only in anonymised form and are used solely to maintain the technical operation of the website. No personal evaluation takes place.
+          <strong>Server log files</strong> – The hosting provider processes technically unavoidable information when the site is accessed (e.g., date &amp; time of request, requested file, browser &quot;User-Agent&quot;). These data are stored without IP addresses or only in anonymised form and are used solely to maintain the technical operation of the website. No personal evaluation takes place.
         </li>
         <li>
           The legal basis for the temporary processing of this technical information is Art. 6 (1) (f) GDPR (legitimate interest in providing a functional website).
@@ -82,8 +82,7 @@ const PrivacyPolicy: React.FC = () => {
         Email us at{' '}
         <a href="mailto:privacy@verinosc.org" className="underline">
           privacy@verinosc.org
-        </a>
-        .
+        </a>.
       </p>
     </div>
   );
