@@ -48,7 +48,7 @@ const ContentSections: React.FC = () => {
                     {content.title}
                   </h1>
                   <div
-                    className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl"
+                    className="mb-12 text-base !leading-relaxed text-black dark:text-body-color-dark sm:text-lg md:text-xl"
                     dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
                   />
                 </div>
