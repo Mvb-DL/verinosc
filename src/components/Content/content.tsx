@@ -18,6 +18,7 @@ const ContentSections: React.FC = () => {
   return (
     <>
       {sections.map((content, index) => {
+        const HeadingTag = pathname === "/transparency" && index === 0 ? "h1" : "h2";
 
         const spacedText = content.text
           .replace(/<br\s*\/?>\s*(\d+\.\d+\.)/g, '<div class="my-10"></div>$1')
@@ -44,9 +45,9 @@ const ContentSections: React.FC = () => {
             <div className="container">
               <div className="flex flex-col lg:flex-row">
                 <div className="w-full lg:w-2/3">
-                  <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
+                  <HeadingTag className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
                     {content.title}
-                  </h1>
+                  </HeadingTag>
                   <div
                     className="mb-12 text-base !leading-relaxed text-black dark:text-body-color-dark sm:text-lg md:text-xl"
                     dangerouslySetInnerHTML={{ __html: sanitizedHtml }}

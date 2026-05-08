@@ -12,13 +12,13 @@ const AboutSectionTwo = () => {
             >
               <Image
                 src="/images/about/about-image-2.svg"
-                alt="about image"
+                alt="Decentralized public infrastructure illustration"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/about/about-image-2-dark.svg"
-                alt="about image"
+                alt="Decentralized public infrastructure illustration"
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
@@ -28,29 +28,29 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  Public oversight
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Verinosc supports digital systems that make governance,
+                  provenance, and accountability easier to inspect over time.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  Digital autonomy
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  The organization prioritizes open and decentralized
+                  approaches that reduce dependence on single intermediaries.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  Durable access
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  Verinosc designs initiatives around long-term availability,
+                  operational independence, and responsible stewardship.
                 </p>
               </div>
             </div>

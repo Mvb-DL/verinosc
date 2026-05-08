@@ -1,5 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Imprint',
+  description:
+    'Legal disclosure, registration details, contact information, and responsible representatives for Verinosc Ltd in Cyprus.',
+  alternates: {
+    canonical: '/legal/imprint',
+  },
+  openGraph: {
+    title: 'Imprint | Verinosc',
+    description:
+      'Legal disclosure, company registration, contact information, and responsible representatives for Verinosc Ltd.',
+    url: '/legal/imprint',
+  },
+};
 
 
 const Imprint: React.FC = () => {

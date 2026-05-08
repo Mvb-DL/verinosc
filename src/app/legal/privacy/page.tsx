@@ -1,4 +1,20 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy & Cookie Notice',
+  description:
+    'Privacy and cookie notice for Verinosc, including data controller details, server log processing, retention, and GDPR rights.',
+  alternates: {
+    canonical: '/legal/privacy',
+  },
+  openGraph: {
+    title: 'Privacy & Cookie Notice | Verinosc',
+    description:
+      'Verinosc privacy and cookie notice with controller details, server log processing, retention, and GDPR rights.',
+    url: '/legal/privacy',
+  },
+};
 
 const PrivacyPolicy: React.FC = () => {
   return (

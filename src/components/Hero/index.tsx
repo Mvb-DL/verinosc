@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
@@ -21,8 +22,8 @@ const Hero = () => {
               </p>
               <div className="flex flex-row items-start justify-start space-x-4">
                 <Link
-                  href="https://nextjstemplates.com/templates/saas-starter-startup"
-                  className="rounded-[15px] bg-[#83aafb] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                  href="/transparency"
+                  className="rounded-md bg-[#83aafb] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                 >
                   Our Transparency
                 </Link>
@@ -32,10 +33,13 @@ const Hero = () => {
             {/* Bild-Block (statt Video) */}
             <div className="w-full lg:w-1/2 px-4 mt-8 lg:mt-0">
               <div className="relative w-full md:h-96 lg:h-[400px] overflow-hidden ">
-                <img
-                  src="/images/hero/hero_image.jpg"         // <-- Pfad zum Hero-Bild anpassen
-                  alt="Hero Image"
-                  className="object-contain w-full h-full"
+                <Image
+                  src="/images/hero/hero_image.jpg"
+                  alt="Abstract digital infrastructure visual for Verinosc"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain"
                 />
               </div>
             </div>
