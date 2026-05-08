@@ -3,7 +3,7 @@ import React from 'react';
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto py-10 px-6 mt-20">
-      <h1 className="text-3xl font-bold text-center mb-8 text-black dark:text-white">Privacy Policy</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-black dark:text-white">Privacy & Cookie Notice</h1>
       <p className="mb-6 text-black dark:text-white">
         <strong>Effective date:</strong> 2 June 2025
       </p>

@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Verinosc",
-  description: "Verinosc",
-
+  description:
+    "Verinosc develops open and decentralized technologies for public benefit, oversight, autonomy, and long-term access to essential digital infrastructure.",
 };
 
 export default function Home() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 const Imprint: React.FC = () => {
@@ -81,7 +82,7 @@ const Imprint: React.FC = () => {
         {/* 10. Privacy & Cookie Notice */}
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-black dark:text-white">10. Privacy & Cookie Notice</h2>
         <p className="mb-6 text-black dark:text-white">
-          Information on how we process personal data and use cookies is provided in our Privacy & Cookie Notice, available at <a href="https://ledg.it.com/ledgit/legal/data-terms" target="_blank" rel="noopener noreferrer" className="underline">https://ledg.it.com/ledgit/legal/data-terms</a>
+          Information on how we process personal data and use cookies is provided in our <Link href="/legal/privacy" className="underline">Privacy & Cookie Notice</Link>.
         </p>
         <hr className="my-6 border-gray-300 dark:border-gray-600" />
 
